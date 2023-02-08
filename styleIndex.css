@@ -1,0 +1,24 @@
+#logo {
+    max-width: 6rem;
+}
+
+#logoText {
+    font-family: Damion;
+    font-size: 3rem;
+}
+
+/* .homeCard {
+    background-image: url(/IMAGES/truckPhoto.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+
+#truckPhoto {
+    margin: auto;
+    max-width: 100%;
+}
+
+.mainButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
