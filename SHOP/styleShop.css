@@ -1,17 +1,118 @@
-#logo {
-    max-width: 6rem;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav {
+    height: 10vh;
+    background: #8f2d56;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+
+.pageLinks {
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#logoImg {
+    max-height: 3em;
+    display: inline;
 }
 
 #logoText {
     font-family: Damion;
-    font-size: 3rem;
+    display: inline;
 }
 
 .allProducts {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.product {
+    padding: 1em;
 }
 
 .productImage {
     max-width: 100%;
+}
+
+.qtySelect {
+    max-width: 3em;
+}
+
+@media (orientation: portrait) {
+    .allProducts {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (orientation: landscape) {
+    .allProducts {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .allProducts {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .line {
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background: black;
+    }
+
+
+    .hamburger {
+        z-index: 2;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+    }
+
+
+    .nav-links {
+        position: fixed;
+        background: #8f2d56;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -13%);
+        -webkit-clip-path: circle(100px at 90% -13%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -13%);
+        pointer-events: all;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .logoHideExpand {
+        display: none;
+    }
 }

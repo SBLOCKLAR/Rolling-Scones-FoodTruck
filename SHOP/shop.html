@@ -17,26 +17,27 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="/IMAGES/logo_transparentbg.png" alt="Rolling Scones Logo" id="logo">
-                    <span id="logoText">Rolling Scones</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Menu</a>
-                        <a class="nav-link" href="#">Contact</a>
-                        <a class="nav-link">Merch</a>
-                    </div>
-                </div>
+        <nav>
+            <div class="logoHideExpand">
+                <a class="pageLinks" href="/index.html"><img src="/IMAGES/logo_transparentbg.png" alt="logo"
+                        id="logoImg">
+                    <p id="logoText">Rolling Scones</p>
+                </a>
             </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a class="pageLinks" href="#">Menu</a></li>
+                <li><a class="pageLinks" href="#">About</a></li>
+                <li><a class="pageLinks" href="#">Contact</a></li>
+                <li><a class="pageLinks" href="/SHOP/shop.html">Shop</a></li>
+            </ul>
+
         </nav>
+
     </header>
 
     <main>
@@ -71,7 +72,6 @@
                 <input type="number" class="qtySelect">
                 <button class="addToCart">Add to Cart</button>
             </div>
-
             <div class="product">
                 <img class="productImage" src="/IMAGES/MERCH/toteBag.png" alt="Bags of coffee beans">
                 <p class="productPrice">$13.99</p>
@@ -86,11 +86,7 @@
                 <input type="number" class="qtySelect">
                 <button class="addToCart">Add to Cart</button>
             </div>
-
-
         </section>
-
-
     </main>
 
     <footer>
@@ -104,7 +100,7 @@
             </ul>
         </nav>
     </footer>
-
+    <script src="/SHOP/appShop.js"></script>
 </body>
 
 </html>
