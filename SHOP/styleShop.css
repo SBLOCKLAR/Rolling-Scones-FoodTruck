@@ -1,0 +1,17 @@
+#logo {
+    max-width: 6rem;
+}
+
+#logoText {
+    font-family: Damion;
+    font-size: 3rem;
+}
+
+.allProducts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.productImage {
+    max-width: 100%;
+}
