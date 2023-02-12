@@ -26,6 +26,13 @@ nav {
     font-size: 25px;
 }
 
+.logoContainer {
+    position: fixed;
+    margin: auto;
+    padding: auto;
+}
+
+
 #logoImg {
     max-height: 3em;
     display: inline;
@@ -36,9 +43,9 @@ nav {
     display: inline;
 }
 
+/* MAIN CONTENT */
 .allProducts {
     display: grid;
-
 }
 
 .product {

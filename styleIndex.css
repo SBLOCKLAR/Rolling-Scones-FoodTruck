@@ -5,25 +5,36 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+header {
+    min-height: 800px;
+}
+
 nav {
-    height: 10vh;
-    background: #8f2d56;
+    z-index: 999;
+    height: 65px;
+    background-color: white;
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    height: 100%;
     justify-content: space-around;
     align-items: center;
-    margin-left: auto;
+    height: 100%;
+    position: relative;
 }
 
 .pageLinks {
     color: black;
     text-decoration: none;
     font-size: 25px;
+}
+
+.logoContainer {
+    position: fixed;
 }
 
 #logoImg {
@@ -34,17 +45,124 @@ nav {
 #logoText {
     font-family: Damion;
     display: inline;
+    color: black;
+    text-shadow: 1px 2px 5px teal;
+}
+
+/* MAIN CONTENT */
+.homeCard {
+    display: flex;
+    justify-content: center;
+}
+
+#truckPhoto {
+    z-index: 0;
+    position: absolute;
+    border-radius: 5%;
+    max-height: 100%;
 }
 
 .mainButtons {
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: fit-content;
+    background-color: none;
+    padding-top: 7%;
+    column-gap: 3em;
 }
 
-/*     BREAK      */
+.mainButtons button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: .25em;
+    white-space: nowrap;
+}
+
+.specials {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.special {
+    border: solid 5px black;
+}
 
 
+.rainbowButtonBorder {
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: relative;
+    -webkit-animation: rainbow 18s ease infinite;
+    -z-animation: rainbow 18s ease infinite;
+    -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;
+}
 
+
+@-webkit-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-moz-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-o-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
 
 
 
@@ -72,14 +190,16 @@ nav {
 
     .nav-links {
         position: fixed;
-        background: #8f2d56;
+        background: white;
         height: 100vh;
         width: 100%;
+        display: flex;
         flex-direction: column;
         clip-path: circle(100px at 90% -13%);
         -webkit-clip-path: circle(100px at 90% -13%);
         transition: all 1s ease-out;
         pointer-events: none;
+        justify-content: space-around;
     }
 
     .nav-links.open {
@@ -88,10 +208,4 @@ nav {
         pointer-events: all;
     }
 
-}
-
-@media screen and (min-width: 768px) {
-    .logoHideExpand {
-        display: none;
-    }
 }
