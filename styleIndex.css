@@ -25,6 +25,7 @@ nav {
     align-items: center;
     height: 100%;
     position: relative;
+    z-index: -1;
 }
 
 .pageLinks {
@@ -81,7 +82,7 @@ nav {
     white-space: nowrap;
 }
 
-.specials {
+.specialContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -199,13 +200,18 @@ nav {
         -webkit-clip-path: circle(100px at 90% -13%);
         transition: all 1s ease-out;
         pointer-events: none;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .nav-links.open {
         clip-path: circle(1000px at 90% -10%);
         -webkit-clip-path: circle(1000px at 90% -13%);
         pointer-events: all;
+    }
+
+    .specialContainer {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
 }

@@ -8,4 +8,21 @@ hamburger.addEventListener('click', () => {
 });
 
 
+// const findUs = document.getElementById('#findUs');
+
+// findUs.addEventListener('click', () => {
+//     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+//     // const successCallback = (position) => {
+//     //     console.log(position);
+//     // }
+//     // const errorCallback = (error) => {
+//     //     console.error(error);
+//     // };
+// })
+
+// const findUs = document.getElementById('#findUs')
+
+// findUs.addEventListener('click'() => {
+//     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+// })
 

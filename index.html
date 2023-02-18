@@ -22,16 +22,17 @@
 <body>
     <header>
         <nav>
-            <div class="logoHideExpand">
+            <div class="logoContainer">
                 <a class="pageLinks" href="/index.html"><img src="/IMAGES/logo_transparentbg.png" alt="logo"
                         id="logoImg">
-                    <p id="logoText">Rolling Scones</p>
+                    <h1 id="logoText">Rolling Scones</h1>
                 </a>
             </div>
             <div class="hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
+                <!-- Change to hamburger svg? -->
             </div>
             <ul class="nav-links">
                 <li><a class="pageLinks" href="#">Menu</a></li>
@@ -39,21 +40,53 @@
                 <li><a class="pageLinks" href="#">Contact</a></li>
                 <li><a class="pageLinks" href="/SHOP/shop.html">Shop</a></li>
             </ul>
-
         </nav>
-    </header>
 
-    <main>
         <section class="homeCard container-fluid">
-            <img class="img-fluid" id="truckPhoto" src="/IMAGES/truckPhoto.png" alt="Food Truck">
+            <img id="truckPhoto" src="/IMAGES/truckPhoto.png" alt="Food Truck">
             <div class="mainButtons">
-                <button>Find Us!</button>
-                <button>Order for Pickup!</button>
+                <div class="rainbowButtonMargin">
+                    <div class="rainbowButtonBorder">
+                        <button id="findUs"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>Find Us Today!</button>
+                    </div>
+                </div>
+                <div class="rainbowButtonMargin">
+                    <div class="rainbowButtonBorder">
+                        <button id="orderPickup">Order for Pickup!</button>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="specials">
+    </header>
+    <main>
+        <section class="specialContainer">
+            <div class="special">
+                <h3>"Paint it Black"</h3>
+                <p>Paint your punch card black! Buy 9 coffees and get the 10th one on us!
+                    inspired by The Rolling
+                    Stones' hit "Paint It Black."
+                </p>
+            </div>
+            <div class="special">
+                <h3>"Start Me Up"</h3>
+                <p>Start the day with a boost! Order off our breakfast menu and get a drip coffee for $1! Just like the
+                    classic hit by The Rolling Stones, "Start Me Up." This offer will
+                    give you the fuel and caffeine you need to tackle the day with confidence.</p>
+            </div>
+            <div class="special">
+                <h3>"Ruby Tuesday"</h3>
+                <p>It's a twofer on Tuesday! Buy one scone or pastry and get a second one free, inspired by The Rolling
+                    Stones' hit "Ruby Tuesday."
+                </p>
+            </div>
 
         </section>
+
     </main>
 
     <footer>
@@ -63,8 +96,8 @@
                 <li><a href="">Menu</a></li>
                 <li><a href="">Contact</a></li>
                 <li><a href="">Merch</a></li>
-                 <li><a href="">Perhaps for the expandable</a></li> -->
-        <!-- </ul>
+                <li><a href="">Perhaps for the expandable</a></li>
+            </ul>
         </nav> -->
     </footer>
     <script src="/appIndex.js"></script>

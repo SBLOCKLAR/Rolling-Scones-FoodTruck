@@ -5,19 +5,27 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* header {
+    min-height: 800px;
+} */
+
 nav {
-    height: 10vh;
-    background: #8f2d56;
+    z-index: 999;
+    height: 65px;
+    background-color: white;
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    height: 100%;
     justify-content: space-around;
     align-items: center;
-    margin-left: auto;
+    height: 100%;
+    position: relative;
+    z-index: -1;
 }
 
 .pageLinks {
@@ -28,10 +36,7 @@ nav {
 
 .logoContainer {
     position: fixed;
-    margin: auto;
-    padding: auto;
 }
-
 
 #logoImg {
     max-height: 3em;
@@ -41,6 +46,8 @@ nav {
 #logoText {
     font-family: Damion;
     display: inline;
+    color: black;
+    text-shadow: 1px 2px 5px teal;
 }
 
 /* MAIN CONTENT */
@@ -49,12 +56,13 @@ nav {
 }
 
 .product {
-    padding: 1em;
+    border: solid 1px black;
 }
 
 .productImage {
     max-width: 100%;
 }
+
 
 .qtySelect {
     max-width: 3em;
@@ -100,26 +108,21 @@ nav {
 
     .nav-links {
         position: fixed;
-        background: #8f2d56;
+        background: white;
         height: 100vh;
         width: 100%;
+        display: flex;
         flex-direction: column;
         clip-path: circle(100px at 90% -13%);
         -webkit-clip-path: circle(100px at 90% -13%);
         transition: all 1s ease-out;
         pointer-events: none;
+        justify-content: space-evenly;
     }
 
     .nav-links.open {
         clip-path: circle(1000px at 90% -10%);
         -webkit-clip-path: circle(1000px at 90% -13%);
         pointer-events: all;
-    }
-
-}
-
-@media screen and (min-width: 768px) {
-    .logoHideExpand {
-        display: none;
     }
 }
