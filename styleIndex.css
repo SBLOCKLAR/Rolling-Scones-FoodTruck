@@ -70,18 +70,18 @@ nav {
 }
 
 #truckGraphic {
-    animation: 4s linear 1s 1 running slidein;
+    animation: 3.5s linear 1s 1 running slidein;
     position: absolute;
     transform: translateX(-51em);
 }
 
 @keyframes slidein {
     from {
-        transform: translate(-18em, 23.5em);
+        transform: translate(-50vw, 23.5em);
     }
 
     to {
-        transform: translate(95em, 23.5em);
+        transform: translate(110vw, 23.5em);
     }
 }
 
@@ -91,13 +91,13 @@ nav {
     grid-template-columns: 1fr 1fr;
     max-width: fit-content;
     background-color: none;
-    column-gap: 5.5em;
-    transform: translateY(5em);
+    column-gap: 5rem;
+    transform: translateY(600px);
 }
 
 .mainButtons button {
     background-color: black;
-    color: white;
+    color: whitesmoke;
     border: none;
     padding: 10px;
     margin: .25em;

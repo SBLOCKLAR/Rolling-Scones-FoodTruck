@@ -5,14 +5,14 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* header {
-    min-height: 800px;
-} */
+body {
+    background-image: url(/IMAGES/mainBG.jpg);
+    background-size: cover;
+}
 
 nav {
     z-index: 999;
     height: 65px;
-    background-color: white;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -29,9 +29,10 @@ nav {
 }
 
 .pageLinks {
-    color: black;
+    color: whitesmoke;
     text-decoration: none;
     font-size: 25px;
+    text-shadow: 1px 2px 5px black;
 }
 
 .logoContainer {
@@ -46,17 +47,25 @@ nav {
 #logoText {
     font-family: Damion;
     display: inline;
-    color: black;
-    text-shadow: 1px 2px 5px teal;
+    color: whitesmoke;
+    text-shadow: 1px 2px 5px black;
 }
+
+/* #cart {
+    color: whitesmoke;
+} */
 
 /* MAIN CONTENT */
 .allProducts {
     display: grid;
+    gap: .25em;
+    padding: 0 5px;
 }
 
 .product {
     border: solid 1px black;
+    background-color: rgba(255, 255, 255, 60%);
+    max-width: 450px;
 }
 
 .productImage {
@@ -66,6 +75,14 @@ nav {
 
 .qtySelect {
     max-width: 3em;
+}
+
+.addToCart {
+    background-color: black;
+    color: whitesmoke;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
 }
 
 @media (orientation: portrait) {
@@ -92,7 +109,8 @@ nav {
         width: 30px;
         height: 3px;
         margin: 5px;
-        background: black;
+        background: whitesmoke;
+        box-shadow: 1px 2px 5px black;
     }
 
 
@@ -105,10 +123,14 @@ nav {
         transform: translate(-5%, -50%);
     }
 
+    .pageLinks {
+        color: black;
+        text-shadow: none;
+    }
 
     .nav-links {
         position: fixed;
-        background: white;
+        background: lavender;
         height: 100vh;
         width: 100%;
         display: flex;

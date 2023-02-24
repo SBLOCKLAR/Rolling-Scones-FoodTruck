@@ -5,6 +5,9 @@ Most difficult part will be the Ecommerce and ordering options.
 Brand Font - Damion - Google Fonts
 https://fonts.google.com/specimen/Damion?preview.text=Rolling%20Scones&preview.text_type=custom&category=Display,Handwriting
 
+I'm learning so much about CSS animation.  Also a lot of practice on position abos, relative, etc. 
+
+
 TODO
 -Choose color pallette
 -Choose main font
