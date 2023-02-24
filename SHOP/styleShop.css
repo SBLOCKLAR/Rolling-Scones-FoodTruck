@@ -56,16 +56,22 @@ nav {
 } */
 
 /* MAIN CONTENT */
+
+main {
+    max-width: 1375px;
+    margin: 0 auto;
+}
+
 .allProducts {
-    display: grid;
-    gap: .25em;
-    padding: 0 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .product {
     border: solid 1px black;
     background-color: rgba(255, 255, 255, 60%);
-    max-width: 450px;
+    max-width: 350px;
 }
 
 .productImage {
@@ -85,24 +91,6 @@ nav {
     border-radius: 5px;
 }
 
-@media (orientation: portrait) {
-    .allProducts {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (orientation: landscape) {
-    .allProducts {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media (min-width: 992px) {
-    .allProducts {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}
-
 @media screen and (max-width: 768px) {
 
     .line {
@@ -112,7 +100,6 @@ nav {
         background: whitesmoke;
         box-shadow: 1px 2px 5px black;
     }
-
 
     .hamburger {
         z-index: 2;
@@ -124,13 +111,14 @@ nav {
     }
 
     .pageLinks {
-        color: black;
-        text-shadow: none;
+        color: whitesmoke;
+        text-shadow: 1px 2px 5px black;
     }
 
     .nav-links {
         position: fixed;
-        background: lavender;
+        background-image: url(/IMAGES/sparseCoffeeBeansBG.jpg);
+        background-size: cover;
         height: 100vh;
         width: 100%;
         display: flex;

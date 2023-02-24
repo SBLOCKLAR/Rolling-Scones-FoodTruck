@@ -7,6 +7,7 @@ https://fonts.google.com/specimen/Damion?preview.text=Rolling%20Scones&preview.t
 
 I'm learning so much about CSS animation.  Also a lot of practice on position abos, relative, etc. 
 
+On shop page, each product needs to be a form to submit to the cart.  I had an aha moment about this tonight.  If each is a form and Add to Cart button is the submit, then the form just appends the item into the cart.  God I'm such a genius. 
 
 TODO
 -Choose color pallette

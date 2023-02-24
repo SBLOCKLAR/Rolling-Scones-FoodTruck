@@ -224,7 +224,8 @@ nav {
 
     .nav-links {
         position: fixed;
-        background: lavender;
+        background-image: url(/IMAGES/sparseCoffeeBeansBG.jpg);
+        background-size: cover;
         height: 100vh;
         width: 100%;
         display: flex;
