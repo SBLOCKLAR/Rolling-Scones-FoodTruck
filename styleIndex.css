@@ -53,9 +53,14 @@ nav {
     display: inline;
     color: whitesmoke;
     text-shadow: 1px 2px 5px black;
+    font-size: 35px;
 }
 
 /* MAIN CONTENT */
+main {
+    margin: 0 auto;
+}
+
 .homeCard {
     display: flex;
     justify-content: center;
@@ -67,10 +72,13 @@ nav {
     height: 750px;
     border-radius: 10%;
     margin: auto;
+
+    /* mask-image: linear-gradient(black, transparent);
+    -webkit-mask-image: linear-gradient(black, transparent); */
 }
 
 #truckGraphic {
-    animation: 3.5s linear 1s 1 running slidein;
+    animation: 5s linear 1s 1 running slidein;
     position: absolute;
     transform: translateX(-51em);
 }
@@ -120,6 +128,16 @@ nav {
     background-color: whitesmoke;
     padding: 15px;
     text-align: center;
+}
+
+.menuContainer {
+    margin: 40px auto;
+    max-width: 1100px;
+}
+
+#menu {
+    width: 100%;
+    border-radius: 50px;
 }
 
 .rainbowButtonBorder {

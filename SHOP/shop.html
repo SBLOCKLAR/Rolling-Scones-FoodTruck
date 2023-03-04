@@ -19,7 +19,7 @@
     <header>
         <nav>
             <div class="logoContainer">
-                <a class="pageLinks" href="/index.html"><img src="/IMAGES/logo_transparentbg.png" alt="logo"
+                <a class="pageLinks" href="../index.html"><img src="../IMAGES/logo_transparentbg.png" alt="logo"
                         id="logoImg">
                     <h1 id="logoText">Rolling Scones</h1>
                 </a>
@@ -38,10 +38,15 @@
                 <!-- Change to hamburger svg? -->
             </div>
             <ul class="nav-links">
-                <li><a class="pageLinks" href="/MENU/menu.html">Menu</a></li>
+                <li><a class="pageLinks" href="../MENU/menu.html">Menu</a></li>
                 <li><a class="pageLinks" href="#">About</a></li>
                 <li><a class="pageLinks" href="#">Contact</a></li>
-                <li><a class="pageLinks" href="/SHOP/shop.html">Shop</a></li>
+                <li><a class="pageLinks" href="../SHOP/shop.html">Shop</a></li>
+                <li><a class="pageLinks" id="cart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg></a></li>
             </ul>
 
         </nav>
@@ -51,52 +56,72 @@
         <section class="allProducts">
 
             <form class="product">
-                <img class="productImage" src="/IMAGES/MERCH/bagsOfBeans.png" alt="Bags of coffee beans">
+                <img class="productImage" src="../IMAGES/MERCH/bagsOfBeans.png" alt="Bags of coffee beans">
                 <p class="productPrice">$15.99</p>
-                <p class="productName">Whole Bean Coffee 12oz</p>
-                <input type="number" class="qtySelect">
+                <p class="productName">Coffee Beans 12oz
+                    <span class="productDescription">(Whole Bean or Ground)</span>
+                </p>
+                <div class="selectors">
+                    <select name="roastSelector" id="roastSelector">
+                        <option value="0">--Pick-A-Roast--</option>
+                        <option value="1">Dark Roast (Whole Bean)</option>
+                        <option value="2">Dark Roast (Ground)</option>
+                        <option value="3">Light Roast (Whole Bean)</option>
+                        <option value="4">Light Roast (Ground)</option>
+                    </select>
+                    Qty <input type="number" class="qtySelect">
+                </div>
                 <button class="addToCart">Add to Cart</button>
             </form>
             <form class="product">
-                <img class="productImage" src="/IMAGES/MERCH/tShirt.png" alt="Bags of coffee beans">
+                <img class="productImage" src="../IMAGES/MERCH/tShirt.png" alt="t-shirt with logo">
                 <p class="productPrice">$25.99</p>
-                <p class="productName">T-Shirt</p>
-                <input type="number" class="qtySelect">
-                <!-- Add a Size picker -->
-                <select name="" id="">
-                    <option value="">--Pick-A-Size--</option>
-                    <option value="">Small</option>
-                    <option value="">Medium</option>
-                    <option value="">Large</option>
-                </select>
+                <p class="productName">Cotton T-Shirt</p>
+                <div class="selectors">
+                    <select name="size" id="sizeSelector" required>
+                        <option value="0">--Pick-A-Size--</option>
+                        <option value="1">Small</option>
+                        <option value="2">Medium</option>
+                        <option value="3">Large</option>
+                    </select>
+                    Qty <input type="number" class="qtySelect" required>
+                </div>
                 <button class="addToCart">Add to Cart</button>
             </form>
             <form class="product">
-                <img class="productImage" src="/IMAGES/MERCH/hat.png" alt="Bags of coffee beans">
-                <span class="productPrice">$27.99</span>
-                <span class="productName">Hat</span>
-                <input type="number" class="qtySelect">
+                <img class="productImage" src="../IMAGES/MERCH/hat.png" alt="hat with logo">
+                <p class="productPrice">$27.99</p>
+                <p class="productName">Baseball Cap</p>
+                <div class="selectors">
+                    Qty <input type="number" class="qtySelect">
+                </div>
                 <button class="addToCart">Add to Cart</button>
             </form>
             <form class="product">
-                <img class="productImage" src="/IMAGES/MERCH/mug.png" alt="Bags of coffee beans">
+                <img class="productImage" src="../IMAGES/MERCH/mug.png" alt="mug with logo">
                 <p class="productPrice">$19.99</p>
-                <p class="productName">Mug</p>
-                <input type="number" class="qtySelect">
+                <p class="productName">Ceramic Mug</p>
+                <div class="selectors">
+                    Qty <input type="number" class="qtySelect">
+                </div>
                 <button class="addToCart">Add to Cart</button>
             </form>
             <form class="product">
-                <img class="productImage" src="/IMAGES/MERCH/toteBag.png" alt="Bags of coffee beans">
+                <img class="productImage" src="../IMAGES/MERCH/toteBag.png" alt="Tote Bag">
                 <p class="productPrice">$13.99</p>
-                <p class="productName">Tote Bag</p>
-                <input type="number" class="qtySelect">
+                <p class="productName">Everyday Tote Bag</p>
+                <div class="selectors">
+                    Qty <input type="number" class="qtySelect">
+                </div>
                 <button class="addToCart">Add to Cart</button>
             </form>
             <form class="product">
-                <img class="productImage" src="/IMAGES/MERCH/tumbler.png" alt="Bags of coffee beans">
+                <img class="productImage" src="../IMAGES/MERCH/tumbler.png" alt="Glass Tumbler">
                 <p class="productPrice">$22.99</p>
-                <p class="productName">Tumbler</p>
-                <input type="number" class="qtySelect">
+                <p class="productName">Glass Tumbler</p>
+                <div class="selectors">
+                    Qty <input type="number" class="qtySelect">
+                </div>
                 <button class="addToCart">Add to Cart</button>
             </form>
         </section>
@@ -105,7 +130,7 @@
     <footer>
 
     </footer>
-    <script src="/SHOP/appShop.js"></script>
+    <script src="appShop.js"></script>
 </body>
 
 </html>
