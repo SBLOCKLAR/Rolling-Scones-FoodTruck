@@ -10,7 +10,7 @@ header {
 }
 
 body {
-    background-image: url(/IMAGES/mainBG.jpg);
+    background-image: url(IMAGES/mainBG.jpg);
     background-size: cover;
 }
 
