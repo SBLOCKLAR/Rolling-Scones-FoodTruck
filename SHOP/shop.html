@@ -42,7 +42,7 @@
                 <li><a class="pageLinks" href="#">About</a></li>
                 <li><a class="pageLinks" href="#">Contact</a></li>
                 <li><a class="pageLinks" href="../SHOP/shop.html">Shop</a></li>
-                <li><a class="pageLinks" id="cart" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                <li><a class="pageLinks" id="cart" href="cart.ejs"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                             height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                             <path
                                 d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
@@ -54,8 +54,8 @@
 
     <main>
         <section class="allProducts">
-
-            <form class="product">
+            <form action="" class="product">
+                <!-- <form action="./cart.html" method="post" class="product"> -->
                 <img class="productImage" src="../IMAGES/MERCH/bagsOfBeans.png" alt="Bags of coffee beans">
                 <p class="productPrice">$15.99</p>
                 <p class="productName">Coffee Beans 12oz
@@ -63,15 +63,16 @@
                 </p>
                 <div class="selectors">
                     <select name="roastSelector" id="roastSelector">
-                        <option value="0">--Pick-A-Roast--</option>
-                        <option value="1">Dark Roast (Whole Bean)</option>
-                        <option value="2">Dark Roast (Ground)</option>
-                        <option value="3">Light Roast (Whole Bean)</option>
-                        <option value="4">Light Roast (Ground)</option>
+                        <option value="">--Pick-A-Roast--</option>
+                        <option value="dkRoastW">Dark Roast (Whole Bean)</option>
+                        <option value="dkRoastG">Dark Roast (Ground)</option>
+                        <option value="ltRoastW">Light Roast (Whole Bean)</option>
+                        <option value="ltRoastG">Light Roast (Ground)</option>
                     </select>
-                    Qty <input type="number" class="qtySelect">
+                    <label for="qty">Qty </label>
+                    <input type="number" class="qtySelect" placeholder="0" name="qty">
                 </div>
-                <button class="addToCart">Add to Cart</button>
+                <button type="submit" class="addToCart">Add to Cart</button>
             </form>
             <form class="product">
                 <img class="productImage" src="../IMAGES/MERCH/tShirt.png" alt="t-shirt with logo">
@@ -84,45 +85,50 @@
                         <option value="2">Medium</option>
                         <option value="3">Large</option>
                     </select>
-                    Qty <input type="number" class="qtySelect" required>
+                    <label for="qty">Qty </label>
+                    <input type="number" class="qtySelect" placeholder="0" name="qty">
                 </div>
-                <button class="addToCart">Add to Cart</button>
+                <button type="submit" class="addToCart">Add to Cart</button>
             </form>
             <form class="product">
                 <img class="productImage" src="../IMAGES/MERCH/hat.png" alt="hat with logo">
                 <p class="productPrice">$27.99</p>
                 <p class="productName">Baseball Cap</p>
                 <div class="selectors">
-                    Qty <input type="number" class="qtySelect">
+                    <label for="qty">Qty </label>
+                    <input type="number" class="qtySelect" placeholder="0" name="qty">
                 </div>
-                <button class="addToCart">Add to Cart</button>
+                <button type="submit" class="addToCart">Add to Cart</button>
             </form>
             <form class="product">
                 <img class="productImage" src="../IMAGES/MERCH/mug.png" alt="mug with logo">
                 <p class="productPrice">$19.99</p>
                 <p class="productName">Ceramic Mug</p>
                 <div class="selectors">
-                    Qty <input type="number" class="qtySelect">
+                    <label for="qty">Qty </label>
+                    <input type="number" class="qtySelect" placeholder="0" name="qty">
                 </div>
-                <button class="addToCart">Add to Cart</button>
+                <button type="submit" class="addToCart">Add to Cart</button>
             </form>
             <form class="product">
                 <img class="productImage" src="../IMAGES/MERCH/toteBag.png" alt="Tote Bag">
                 <p class="productPrice">$13.99</p>
                 <p class="productName">Everyday Tote Bag</p>
                 <div class="selectors">
-                    Qty <input type="number" class="qtySelect">
+                    <label for="qty">Qty </label>
+                    <input type="number" class="qtySelect" placeholder="0" name="qty">
                 </div>
-                <button class="addToCart">Add to Cart</button>
+                <button type="submit" class="addToCart">Add to Cart</button>
             </form>
             <form class="product">
                 <img class="productImage" src="../IMAGES/MERCH/tumbler.png" alt="Glass Tumbler">
                 <p class="productPrice">$22.99</p>
                 <p class="productName">Glass Tumbler</p>
                 <div class="selectors">
-                    Qty <input type="number" class="qtySelect">
+                    <label for="qty">Qty </label>
+                    <input type="number" class="qtySelect" placeholder="0" name="qty">
                 </div>
-                <button class="addToCart">Add to Cart</button>
+                <button type="submit" class="addToCart">Add to Cart</button>
             </form>
         </section>
     </main>
@@ -134,3 +140,5 @@
 </body>
 
 </html>
+
+<!-- Use Express and REST in initial apps (get, post, render) -->

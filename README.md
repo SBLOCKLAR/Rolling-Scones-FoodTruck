@@ -29,3 +29,7 @@ ToteBag Credits - Photo by <a href="https://unsplash.com/@mediamodifier?utm_sour
   
   Hat Credit - Photo by <a href="https://unsplash.com/@mediamodifier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mediamodifier</a> on <a href="https://unsplash.com/photos/DT7ercyDWjs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
+
+  Dependencies Express and EJS
+  Could use the UUID node module if wanting to create a unique numerical id for products
+  

@@ -1,0 +1,23 @@
+{
+  "name": "rolling-scones",
+  "version": "1.0.0",
+  "description": "Website for fake company Rolling Scones for Portfolio I am using bootstrap and Sass for a lot of this website.   Most difficult part will be the Ecommerce and ordering options.  Brand Font - Damion - Google Fonts https://fonts.google.com/specimen/Damion?preview.text=Rolling%20Scones&preview.text_type=custom&category=Display,Handwriting",
+  "main": "appIndex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SBLOCKLAR/Rolling-Scones-FoodTruck.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SBLOCKLAR/Rolling-Scones-FoodTruck/issues"
+  },
+  "homepage": "https://github.com/SBLOCKLAR/Rolling-Scones-FoodTruck#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}
