@@ -1,3 +1,5 @@
+// Hamburger menu collapse
+
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const links = document.querySelectorAll('.pageLinks');
@@ -7,64 +9,76 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
 });
 
-// const cart = document.querySelector('#cart');
-// const addToCart = document.querySelectorAll('.addToCart');
-// const product = [{
-//     'id': "",
-//     'price': "",
-//     'size': "",
-//     'qty': "",
-// }];
+// Products
+// const product = {
+//     productName: document.querySelector('.productName').innerHTML,
+//     productPrice: document.querySelector('.productPrice').innerHTML,
+//     roastSelection: document.querySelector('#roastSelector').value,
+//     // imgSrc: document.querySelector.getAttribute('src'),
+//     qty: document.querySelector('.qtySelect').value
+// }
+const cartContents = document.querySelector(".cartContents")
+const product =
+    `<div class="cartItem">
+    <img class="cartImg" src="../IMAGES/MERCH/toteBag.png" alt="">
+    <p class="cartProductName">Everyday Tote Bag</p>
+    <input type="number" class="qtyInCart">
+    <p class="cartProductPrice">$13.99</p>
+</div>`;
 
-// const productData = require('./data.json')
-// Create JSON database with products. Review JSON
-// Working with the below, I am struggling to retrieve the innerText propery from the HTML collection that appears with the code as is now. 
-let roast = document.querySelector('#roastSelector').selectedOptions;
-let size = document.querySelector('#sizeSelector').selectedOptions;
+// Hide and Show Cart
+const cartIcon = document.querySelector('#cart');
+const cartPreview = document.querySelector('.cartPreview');
+const keepShopping = document.querySelector('#keepShopping');
 
-const products = [
-    {
-        productName: 'Coffee Beans 12oz',
-        productPrice: 15.99,
-        roast: roast
-    },
 
-    {
-        productName: 'Cotton T-Shirt',
-        productPrice: 25.99,
-        size: size
-    },
-    {
-        productName: 'Baseball Cap',
-        productPrice: 27.99
-    },
-    {
-        productName: 'Ceramic Mug',
-        productPrice: 19.99
-    },
-    {
-        productName: 'Everyday Tote Bag',
-        productPrice: 13.99
-    },
-    {
-        productName: 'Glass Tumbler',
-        productPrice: 22.99
-    },
-]
+cartIcon.addEventListener('click', () => {
+    cartPreview.classList.toggle('open');
+});
 
-// app.get('/products', (req, res) => {
-    // res.render('products/cart', { products })
-// })
+keepShopping.addEventListener('click', () => {
+    cartPreview.classList.toggle('open');
+})
 
-// let productForm = document.querySelectorAll('.product');
+if (cartPreview.classList.contains('open')) {
+    cartPreview.setAttribute('display', 'hidden');
+}
 
-// let productId = document.querySelector('.productName').innerText;
-// let price = document.querySelector('.productPrice').innerText;
-// let qty = document.querySelector('.qtySelect').value;
+// Cart Elements
+const cart = [];
+const counter = document.querySelector('.cartCounter');
+counter.innerHTML = cart.length;
+const checkoutButton = document.querySelector('#checkout');
 
-// let cartItems = [];
+// Render the cart
+function loadCart(cart) {
+    if (cart.length === 0) {
+        // Disable the Checkout button
+        checkoutButton.disabled = true;
+        // Update the header to Empty Alert
+        const header = document.querySelector('.previewHeader');
+        header.textContent = "Oh no! There's nothing here! :(";
+    } else {
+        // Enable Checkout Button
+        checkoutButton.disabled = false;
+        // Update Header
+        header.textContent = "Your Shopping Cart"
+    }
+}
+loadCart(cart);
 
-// productForm.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     console.log('add to cart')
-// })
+// Add an item to the cart
+function addToCart(item) {
+    // Render cart item
+    function renderCartItem() {
+
+    }
+}
+
+// Remove an item from the cart
+
+
+// Get the total price of the items in the cart
+
+
+

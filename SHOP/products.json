@@ -1,0 +1,40 @@
+[
+    {
+        "productName": "Coffee Beans 12oz",
+        "productPrice": 15.99,
+        "selection": "FIX THIS",
+        "imgSrc": "../IMAGES/MERCH/bagsOfBeans.png",
+        "qty": 0
+    },
+    {
+        "productName": "Cotton T-Shirt",
+        "productPrice": 25.99,
+        "selection": "SMALL",
+        "imgSrc": "../IMAGES/MERCH/tShirt.png",
+        "qty": 0
+    },
+    {
+        "productName": "Baseball Cap",
+        "productPrice": 27.99,
+        "imgSrc": "../IMAGES/MERCH/hat.png",
+        "qty": 0
+    },
+    {
+        "productName": "Ceramic Mug",
+        "productPrice": 19.99,
+        "imgSrc": "../IMAGES/MERCH/mug.png",
+        "qty": 0
+    },
+    {
+        "productName": "Everyday Tote Bag",
+        "productPrice": 13.99,
+        "imgSrc": "../IMAGES/MERCH/toteBag.png",
+        "qty": 0
+    },
+    {
+        "productName": "Glass Tumbler",
+        "productPrice": 22.99,
+        "imgSrc": "../IMAGES/MERCH/tumbler.png",
+        "qty": 0
+    }
+]

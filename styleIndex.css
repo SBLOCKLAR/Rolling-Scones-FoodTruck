@@ -12,6 +12,7 @@ header {
 body {
     background-image: url(IMAGES/mainBG.jpg);
     background-size: cover;
+    overflow-x: hidden;
 }
 
 nav {
@@ -54,6 +55,12 @@ nav {
     color: whitesmoke;
     text-shadow: 1px 2px 5px black;
     font-size: 35px;
+}
+
+#cartPreview {
+    position: absolute;
+    width: 800px;
+    height: 800px;
 }
 
 /* MAIN CONTENT */

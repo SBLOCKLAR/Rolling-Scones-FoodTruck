@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +17,8 @@ nav {
     height: 65px;
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 0.1fr;
+    padding-right: 1em;
 }
 
 .nav-links {
@@ -26,7 +29,6 @@ nav {
     height: 100%;
     position: relative;
     z-index: -1;
-
 }
 
 .pageLinks {
@@ -42,7 +44,6 @@ nav {
 
 #logoImg {
     max-height: 3em;
-    display: inline;
 }
 
 #logoText {
@@ -51,10 +52,32 @@ nav {
     color: whitesmoke;
     text-shadow: 1px 2px 5px black;
     font-size: 35px;
+    position: fixed;
+    margin-top: .25em;
 }
 
 #cart {
     color: black;
+    margin: auto;
+    border: 3px solid black;
+    padding: 0.25em;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+.cartCounter {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+    position: absolute;
+    top: 10%;
+    margin-left: 1.25em;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    text-shadow: none;
+    margin-right: 5px;
 }
 
 /* MAIN CONTENT */
@@ -115,6 +138,7 @@ select {
     text-align: center;
 }
 
+
 .addToCart {
     background-color: black;
     color: whitesmoke;
@@ -127,38 +151,106 @@ select {
 }
 
 /* CART PAGE STYLINGS START HERE */
-div#cartItems {
-    background-color: whitesmoke;
-    width: 90%;
-    min-height: 150px;
-    margin: 12em auto 2em auto;
-    opacity: 0.75;
-    border: 1px solid black;
-}
-
-#emptyCart {
-    text-align: center;
-    margin: auto;
-}
-
-#cartNavigation {
-    text-align: center;
-}
-
-#continueShopping,
-#checkoutButton {
+.cartPreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0.5em;
-    border: none;
-    border-radius: 10px;
-    margin: 1em;
+    z-index: -1;
+    background-color: white;
+    position: fixed;
+    overflow-x: none;
+    max-width: 500px;
+    min-height: 50vh;
+    max-height: 500px;
+    border-radius: 5px;
+    place-self: end;
+    transform: translate(2%, -20%);
+    clip-path: inset(50px at 90% -13%);
+    -webkit-clip-path: inset(50px at 90% -13%);
 }
 
-button a {
-    text-decoration: none;
-    color: black;
+.cartPreview.open {
+    transform: translate(2%, 87%);
+    clip-path: inset(500px at 90% -13%);
+    -webkit-clip-path: inset(500px at 90% -13%);
+    pointer-events: all;
 }
+
+.previewHeader {
+    margin-top: 3em;
+}
+
+.cartContents {
+    width: 100%;
+}
+
+.buttonContainer>button {
+    background-color: black;
+    color: whitesmoke;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 0.25em;
+    display: inline;
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.cartItem>input {
+    width: 2.5em;
+    margin-right: 0.25em;
+}
+
+.cartImg {
+    width: 22%;
+    border-radius: 50%;
+}
+
+.cartNav {
+    text-align: right;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.total {
+    border: 1px solid black;
+    text-align: end;
+    padding-right: 1em;
+}
+
+.cartNav>button {
+    background-color: black;
+    color: whitesmoke;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 0.25em;
+}
+
+.cartNav>button>a {
+    text-decoration: none;
+    color: white;
+}
+
 
 @media screen and (max-width: 768px) {
+
+    #cart {
+        margin-left: 195%;
+    }
 
     .line {
         width: 30px;
@@ -172,7 +264,7 @@ button a {
         z-index: 2;
         position: absolute;
         cursor: pointer;
-        right: 5%;
+        right: 12%;
         top: 50%;
         transform: translate(-5%, -50%);
     }
